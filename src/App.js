@@ -11,22 +11,11 @@ import MainPage from "./pages/MainPage";
 function App() {
   return (
     <Router>
-    <div className="App bg-gray-500 flex flex-col items-center">
-      <header className="App-header 
-      fixed h-10 rounded-lg flex w-1/4 
-      items-center text-white bg-black 
-      justify-center border border-gray-400 border-1'">
-        <NavLinks/>
-      </header>
-      <main>
+    <div className="App bg-[rgb(26,27,37)]">
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
           <Route path="/projects/:id" element={<LandingPage/>}/>
         </Routes>
-      </main>
-      <footer className="text-white flex flex-row items-center justify-center">
-        <Copyright/>
-      </footer>
     </div>
     </Router>
   );

@@ -3,27 +3,25 @@ import Welcome from '../main/Welcome'
 //import Projects from '../main/Projects'
 import CardList from '../components/CardList'
 import { AnimatePresence } from 'framer-motion'
-import CardOpen from '../components/CardOpen'
+//import CardOpen from '../components/CardOpen'
 import { useParams } from 'react-router'
+import Skills from '../components/Skills'
 
 const MainPage = () => {
   const { id } = useParams(); 
 console.log(id)
   return (
-    <div className='bg-blue-200 h-full w-full'>
-      <Welcome/>
-      <section id='projects' className='bg-blue-300 h-full w-full flex flex-col p-3 items-center '>
-        <h1>Latest Projects</h1>
-        <div className='w-full'>
+    <div className='h-full w-full'>
+        <Welcome/>
+        <section id='skills' className='flex flex-col items-center'>
+          <Skills/>
+        </section>
+      <section id='projects' className=' text-white h-screen w-full flex flex-col p-5'>
+        <h1 className='font-play text-[18px]'>Latest Projects</h1>
+        <div className='w-full py-5'>
           <CardList selectedId={id}>
-            <AnimatePresence>
-              <CardOpen id={id} key='card'/>
-            </AnimatePresence>
           </CardList>
         </div>
-      </section>
-      <section id='skills'>
-        <h1>My skills</h1>
       </section>
       <section id='personal'>
         <h1>Favorite Quotes</h1>

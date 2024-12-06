@@ -2,6 +2,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HomeIcon from '@mui/icons-material/Home';
+import { motion } from 'framer-motion';
 
 import React from 'react'
 import { Link } from 'react-router';
@@ -34,13 +35,19 @@ const links =[
 
 
   return (
-    <div className='flex flex-row gap-6'>
+    <motion.div 
+    whileHover={{scale: 1.1}}
+    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    className='bg-black top-0 fixed
+    text-white p-3
+    rounded-full
+    flex flex-row gap-6 hover:text-green-400 z-50'>
         <ScrollToSection/>
-      {links.map((link)=>{
-       return( <Link to={link.path}> {getIcon(link.icon)} </Link>
+      {links.map((link, index)=>{
+       return( <Link key={index} to={link.path}> {getIcon(link.icon)} </Link>
         )
       })}
-    </div>
+    </motion.div>
   )
 }
 
