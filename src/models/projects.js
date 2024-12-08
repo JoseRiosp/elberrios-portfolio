@@ -16,17 +16,6 @@ export const projects = [
             image: '/product.png',    
             github: 'https://github.com/JoseRiosp/next-task-app.git', 
             deploy: ''
-        },{
-            id: 2,
-            name: 'Product Store Management',
-            description: 'Your online store to promote all your products',
-            language: [faJs, faHtml5, faCss],
-            technologies:'Nextjs - Reactjs - Tailwindcss',
-            powered:'Vercel',
-            status: 'in development...',
-            image: '/product.png',    
-            github: 'https://github.com/JoseRiosp/next-task-app.git', 
-            deploy: ''
         }
         ]
 
