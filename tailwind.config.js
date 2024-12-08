@@ -6,6 +6,9 @@ module.exports = {
       fontFamily:{
         micro5: ["'Micro 5'", 'sans-serif'],
         play:["'Play'", 'sans-serif']
+      },
+      backdropBlur: {
+        md: '12px',
       }
     },
   },

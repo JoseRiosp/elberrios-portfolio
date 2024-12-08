@@ -1,5 +1,6 @@
 import React from 'react'
 import Welcome from '../main/Welcome'
+import { motion } from 'framer-motion'
 //import Projects from '../main/Projects'
 import CardList from '../components/CardList'
 import { AnimatePresence } from 'framer-motion'
@@ -11,21 +12,32 @@ const MainPage = () => {
   const { id } = useParams(); 
 console.log(id)
   return (
-    <div className='h-full w-full'>
+    <div className='h-full w-auto'>
+        <motion.section id='/'
+        whileInView={{opacity: 1, y: 0}}
+        initial={{opacity: 0, y:100}}
+        transition={{duration: 0.5}}>
         <Welcome/>
-        <section id='skills' className='flex flex-col items-center'>
+        </motion.section>
+        <motion.section id='skills' className='w-full'
+        whileInView={{opacity: 1, y: 0}}
+        initial={{opacity: 0, y:100}}
+        transition={{duration: 0.5}}>
           <Skills/>
-        </section>
-      <section id='projects' className=' text-white h-screen w-full flex flex-col p-5'>
+        </motion.section>
+      <motion.section id='projects' className=' text-white h-auto w-full flex flex-col p-5' 
+      whileInView={{opacity: 1, y: 0}}
+        initial={{opacity: 0, y:100}}
+        transition={{duration: 0.5}}>
         <h1 className='font-play text-[18px]'>Latest Projects</h1>
         <div className='w-full py-5'>
           <CardList selectedId={id}>
           </CardList>
         </div>
-      </section>
-      <section id='personal'>
+      </motion.section>
+      <motion.section id='personal'>
         <h1>Favorite Quotes</h1>
-      </section>
+      </motion.section>
     </div>
   )
 }

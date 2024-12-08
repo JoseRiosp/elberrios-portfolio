@@ -7,7 +7,9 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const ProfileCard = () => {
   return (
-    <div className='h-auto z-20 bg-white md:fixed text-[rgb(26,27,37)]
+    <div className='h-auto z-20 
+     bg-white
+    md:fixed text-[rgb(26,27,37)]
     flex p-3 w-1/2 md:w-1/4 flex-col rounded-lg font-play 
     items-center'>
       <p className='text-[25px] p-2' >Hey! I'm Elber Ríos</p>
