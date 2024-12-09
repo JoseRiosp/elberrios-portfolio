@@ -26,7 +26,7 @@ const ProjectCard = ({project}) => {
   return (
         <motion.div className='flex flex-row gap-5 items-center
          w-full shadow-lg text-white
-        bg-gradient-to-r from-gray-700 via-gray-400 to-gray-800
+        bg-gradient-to-r from-gray-700/50 via-gray-400/50 to-gray-800/50
         backdrop-blur border border-gray-600 
        p-3 rounded-lg'
        whileHover={{scale: 1.1}}

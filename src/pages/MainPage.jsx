@@ -19,7 +19,7 @@ console.log(id)
         transition={{duration: 0.5}}>
         <Welcome/>
         </motion.section>
-        <motion.section id='skills' className='w-full'
+        <motion.section id='skills' className='w-full h-auto'
         whileInView={{opacity: 1, y: 0}}
         initial={{opacity: 0, y:100}}
         transition={{duration: 0.5}}>

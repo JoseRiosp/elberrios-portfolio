@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import { motion } from 'framer-motion'
 
 const ProfileImg = () => {
+
+    const [imageLoaded, setimageLoaded] = useState(false)
+    useEffect(() => {
+     const img = new Image();
+     img.src='/elberrios.JPG';
+     img.onload =()=> setimageLoaded(true);
+    }, [])
+    
+
   return (
     <div className='rounded-full relative w-auto h-auto shadow shadow-lg'>
-        <img src='/elberrios.JPG' 
+        {imageLoaded ? (
+        <div>
+            <img src='/elberrios.JPG' 
             className='relative rounded-full'
             alt='Elber Rios pic'>
-        </img>
+        </img> 
         
     <motion.div 
         className='absolute top-2 right-1 bg-black rounded-full h-20 w-20 z-1' 
@@ -57,6 +68,7 @@ const ProfileImg = () => {
                 </a>
             </motion.div> 
         </motion.div>
+        </div>) : <p className='text-gray-400'>Loading...</p>}
 
 
     </div>

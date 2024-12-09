@@ -2,10 +2,6 @@ import React, { useState } from 'react'
 import { animate, AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom';
 import { projects } from '../models/projects';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faJs } from '@fortawesome/free-brands-svg-icons';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import ProjectCard from './ProjectCard';
 
 function Card({ id, type, projects}){
@@ -25,8 +21,8 @@ const CardList = ({selectedId, onSelectedCard}) => {
       {projects.map((card)=>{
         return (
           <motion.h1 className='text-white hover:text-green-400
-        font-play text-{14px} py-3 
-        bg-gradient-to-r from-black via-gray-800 to-black
+        font-play text-{14px} py-3
+        bg-gradient-to-r from-black/50 via-gray-800/50 to-black/50
          rounded-lg relative font-play p-3'
          whileInView={{opacity: 1, y: 0}}
         initial={{opacity: 0, y:100}}

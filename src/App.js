@@ -12,10 +12,12 @@ function App() {
   return (
     <Router>
     <div className="App bg-[rgb(26,27,37)]">
+    <div className="bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre-v2.png')] bg-repeat">
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
           <Route path="/projects/:id" element={<LandingPage/>}/>
         </Routes>
+    </div>
     </div>
     </Router>
   );
