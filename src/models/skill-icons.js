@@ -10,7 +10,7 @@ export const skillIcons =[
     {id: 5, icon: faSass },
     {id: 6, icon: faSquareGit },
     {id: 7, icon: faPython },
-    {id: 14, icon: <SiCplusplus/>},
+    {id: 14, icon: <SiCplusplus className='h-20 w-20'/>},
     {id: 8, icon: faNode },
     {id: 9, icon: faJs },
     {id: 10, icon: faHtml5  },

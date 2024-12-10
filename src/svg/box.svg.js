@@ -11,7 +11,7 @@ d="M281 210H1.99999L0.32605 208.905L136.326
 0.905486L138 2L3.30768 208H279.625L138 2L139.648 
 0.866943L282.648 208.867L281 210Z" 
 fill='none'
-stroke="rgb(115,185,100)"
+stroke="rgb(116,214,134)"
 strokeWidth='3'
 initial={{ 
     opacity:1,
@@ -21,7 +21,7 @@ animate={{
     pathLength: 1,
 }}
 transition={{
-    duration: 3,
+    duration: 6,
     ease: "easeInOut",
     repeat: Infinity,
     repeatType: "reverse",

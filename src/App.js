@@ -11,7 +11,7 @@ import MainPage from "./pages/MainPage";
 function App() {
   return (
     <Router>
-    <div className="App bg-[rgb(26,27,37)]">
+    <div className="App bg-[rgb(26,27,37)] w-full">
     <div className="bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre-v2.png')] bg-repeat">
         <Routes>
           <Route path='/' element={<LandingPage/>}/>

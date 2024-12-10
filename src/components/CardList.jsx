@@ -21,7 +21,7 @@ const CardList = ({selectedId, onSelectedCard}) => {
       {projects.map((card)=>{
         return (
           <motion.h1 className='text-white hover:text-green-400
-        font-play text-{14px} py-3
+        font-play text-{14px} py-3 border border-gray-700
         bg-gradient-to-r from-black/50 via-gray-800/50 to-black/50
          rounded-lg relative font-play p-3'
          whileInView={{opacity: 1, y: 0}}

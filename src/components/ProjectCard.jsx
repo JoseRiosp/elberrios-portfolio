@@ -16,7 +16,7 @@ const ProjectCard = ({project}) => {
       
         // Si el icono es de FontAwesome
         if (typeof icon === 'object' && icon.prefix && icon.iconName) {
-          return <FontAwesomeIcon key={index} icon={icon} className='h-4'/>;
+          return <FontAwesomeIcon key={index} icon={icon} className='h-4 text-green-400'/>;
         }
         // Si el icono es inválido o no reconocido
         console.log('icon not found');
@@ -26,7 +26,9 @@ const ProjectCard = ({project}) => {
   return (
         <motion.div className='flex flex-row gap-5 items-center
          w-full shadow-lg text-white
-        bg-gradient-to-r from-gray-700/50 via-gray-400/50 to-gray-800/50
+         bg-gradient-to-r from-gray-800/50 via-gray-600/50 to gray-700/50
+        hover:bg-gradient-to-r hover:from-gray-600/50 
+        hover:via-gray-400/50 hover:to-gray-700/50
         backdrop-blur border border-gray-600 
        p-3 rounded-lg'
        whileHover={{scale: 1.1}}
@@ -53,6 +55,7 @@ const ProjectCard = ({project}) => {
           transition={{duration:0.5}}>
           
         <motion.div className='flex flex-col gap-2 justify-center'>
+          <p className='text-green-400'>{project.status}</p>
           <p>{project.description}</p>
           <p>Techstack: {project.technologies}</p>
           <p>Powered by: {project.powered}</p>

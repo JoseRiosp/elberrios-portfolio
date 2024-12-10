@@ -31,7 +31,7 @@ export const projects = [
         projects:[{
             name: 'Battle Naval Game',
             description: 'A CLI mini-game for two players',
-            language:[<CgCPlusPlus/>],
+            language:[<CgCPlusPlus className="text-green-400"/>],
             technologies:'CLI, bash/zsh',
             status: 'finished',
             image: '/naval-game.png',
